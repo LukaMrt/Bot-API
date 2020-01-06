@@ -2,6 +2,8 @@ package fr.lukam.bot_api.entities;
 
 import fr.lukam.bot_api.Status;
 
+import java.util.Calendar;
+
 public interface User {
 
     String getName();
@@ -10,6 +12,7 @@ public interface User {
 
     String getAsTag();
 
+    // TODO : refactor in Mentionable
     String getAsMention();
 
     void sendMessage();
@@ -17,5 +20,7 @@ public interface User {
     Status getStatus();
 
     String getId();
+
+    Calendar getCreateAccountTime();
 
 }
