@@ -7,6 +7,8 @@ import java.util.Set;
 
 public interface Role {
 
+    String getId();
+
     String getName();
 
     Color getColor();
