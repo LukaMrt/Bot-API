@@ -4,6 +4,4 @@ public interface Permission {
 
     String getName();
 
-    String getDescription();
-
 }
