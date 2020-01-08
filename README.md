@@ -7,10 +7,10 @@ Bot-API is a basic API to make an abstract layer between your the code of your d
 
 ## Built With
 
-* [Gradle](https://gradle.org/) - Dependency Management
+*   [Gradle](https://gradle.org/) - Dependency Management
 
 ## Authors
 
-* **Luka Maret** - [Personal Github](https://github.com/LukaMrt)
+*   **Luka Maret** - [Personal Github](https://github.com/LukaMrt)
 
 See also the list of [contributors](https://github.com/LukaMrt/Bot-API/contributors) who participated in this project.
