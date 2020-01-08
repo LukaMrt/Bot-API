@@ -1,6 +1,6 @@
-package fr.lukam.bot_api.entities;
+package fr.lukam.bot_api.entities.guild;
 
-import fr.lukam.bot_api.Permission;
+import fr.lukam.bot_api.entities.User;
 import fr.lukam.bot_api.entities.channels.GuildVoiceChannel;
 
 import java.util.Calendar;

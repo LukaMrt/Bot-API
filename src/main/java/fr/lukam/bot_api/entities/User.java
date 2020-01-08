@@ -1,8 +1,8 @@
 package fr.lukam.bot_api.entities;
 
-import fr.lukam.bot_api.Identifiable;
-import fr.lukam.bot_api.Mentionable;
-import fr.lukam.bot_api.Nameable;
+import fr.lukam.bot_api.behavior.Identifiable;
+import fr.lukam.bot_api.behavior.Mentionable;
+import fr.lukam.bot_api.behavior.Nameable;
 import fr.lukam.bot_api.Status;
 import fr.lukam.bot_api.entities.channels.TextChannel;
 
