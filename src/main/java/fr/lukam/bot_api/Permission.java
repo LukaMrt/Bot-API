@@ -1,7 +1,5 @@
 package fr.lukam.bot_api;
 
-public interface Permission {
-
-    String getName();
+public interface Permission extends Nameable {
 
 }
