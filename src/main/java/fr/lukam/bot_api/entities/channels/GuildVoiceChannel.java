@@ -1,6 +1,6 @@
 package fr.lukam.bot_api.entities.channels;
 
-import fr.lukam.bot_api.entities.GuildMember;
+import fr.lukam.bot_api.entities.guild.GuildMember;
 
 import java.util.List;
 

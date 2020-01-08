@@ -1,6 +1,6 @@
-package fr.lukam.bot_api.entities;
+package fr.lukam.bot_api.entities.message;
 
-import fr.lukam.bot_api.Field;
+import fr.lukam.bot_api.entities.User;
 
 import java.awt.*;
 import java.util.List;

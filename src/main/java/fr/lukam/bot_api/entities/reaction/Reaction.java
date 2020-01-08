@@ -1,4 +1,6 @@
-package fr.lukam.bot_api.entities;
+package fr.lukam.bot_api.entities.reaction;
+
+import fr.lukam.bot_api.entities.User;
 
 import java.util.List;
 

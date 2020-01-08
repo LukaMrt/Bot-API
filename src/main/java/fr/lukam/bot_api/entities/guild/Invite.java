@@ -1,4 +1,4 @@
-package fr.lukam.bot_api.entities;
+package fr.lukam.bot_api.entities.guild;
 
 public interface Invite {
 
