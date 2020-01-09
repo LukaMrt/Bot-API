@@ -8,7 +8,6 @@ import fr.lukam.bot_api.entities.channels.TextChannel;
 import fr.lukam.bot_api.entities.channels.GuildVoiceChannel;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface Guild extends Identifiable, Nameable {
 
@@ -18,31 +17,31 @@ public interface Guild extends Identifiable, Nameable {
 
     GuildMember getSelfMember();
 
-    Optional<GuildChannel> getDefaultChannel();
+    GuildChannel getDefaultChannel();
 
     Role getDefaultRole();
 
     List<GuildMember> getMembers();
 
-    Optional<GuildMember> getMemberById(String memberId);
+    GuildMember getMemberById(String memberId);
 
     String getIconURLl();
 
     List<Role> getRoles();
 
-    Optional<Role> getRoleById(String roleId);
+    Role getRoleById(String roleId);
 
     List<Emote> getCustomEmotes();
 
-    Optional<Emote> getMemberByName(String emoteName);
+    Emote getMemberByName(String emoteName);
 
     List<TextChannel> getChannels();
 
-    Optional<GuildChannel> getChannelById(String channelId);
+    GuildChannel getChannelById(String channelId);
 
     List<Category> getCategories();
 
-    Optional<Category> getCategoryById(String categoryId);
+    Category getCategoryById(String categoryId);
 
     void addCategory(Category category);
 
