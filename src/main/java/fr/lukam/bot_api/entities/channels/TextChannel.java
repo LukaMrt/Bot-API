@@ -4,7 +4,6 @@ import fr.lukam.bot_api.behavior.Nameable;
 import fr.lukam.bot_api.entities.message.Message;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface TextChannel extends Channel, Nameable {
 
@@ -14,7 +13,7 @@ public interface TextChannel extends Channel, Nameable {
 
     void sendMessage(Message message);
 
-    Optional<Message> getMessageById();
+    Message getMessageById();
 
     List<Message> getHistoryBefore(Message message, boolean include, int count);
 
