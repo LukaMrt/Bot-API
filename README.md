@@ -6,7 +6,7 @@
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat)](https://gitmoji.carloscuesta.me)
 [![Release](https://jitpack.io/v/LukaMrt/Bot-API.svg)](https://jitpack.io/LukaMrt/Bot-API)
 
-Bot-API is a basic API to make an abstract layer between the code of your domain and the API which you use (for example JDA if you are making a java discord bot).
+Bot-API is a basic API to make an abstract layer between the code of your domain and the API which you use (for example JDA if you are making a java discord API).
 
 ## Getting Started
 
