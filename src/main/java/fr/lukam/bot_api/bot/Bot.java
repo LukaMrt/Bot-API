@@ -1,7 +1,7 @@
 package fr.lukam.bot_api.bot;
 
-import fr.lukam.bot_api.entities.user.User;
-import fr.lukam.bot_api.entities.guild.Guild;
+import fr.lukam.bot_api.entities.interfaces.user.User;
+import fr.lukam.bot_api.entities.interfaces.guild.Guild;
 
 public interface Bot {
 
