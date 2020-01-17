@@ -1,7 +1,7 @@
 package fr.lukam.bot_api.entities.message;
 
 import fr.lukam.bot_api.behaviors.Identifiable;
-import fr.lukam.bot_api.entities.User;
+import fr.lukam.bot_api.entities.user.User;
 import fr.lukam.bot_api.entities.channels.GuildTextChannel;
 import fr.lukam.bot_api.entities.guild.GuildMember;
 import fr.lukam.bot_api.entities.guild.Role;

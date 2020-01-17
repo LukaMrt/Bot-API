@@ -1,12 +1,11 @@
-package fr.lukam.bot_api.entities;
+package fr.lukam.bot_api.entities.user;
 
 import fr.lukam.bot_api.behaviors.Identifiable;
 import fr.lukam.bot_api.behaviors.Mentionable;
 import fr.lukam.bot_api.behaviors.Nameable;
-import fr.lukam.bot_api.Status;
 import fr.lukam.bot_api.entities.channels.TextChannel;
 
-import java.util.Calendar;
+import java.time.LocalDateTime;
 
 public interface User extends Mentionable, Identifiable, Nameable {
 
@@ -20,6 +19,6 @@ public interface User extends Mentionable, Identifiable, Nameable {
 
     Status getStatus();
 
-    Calendar getCreateAccountTime();
+    LocalDateTime getCreateAccountTime();
 
 }

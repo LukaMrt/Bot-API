@@ -1,9 +1,9 @@
 package fr.lukam.bot_api.entities.guild;
 
-import fr.lukam.bot_api.entities.User;
+import fr.lukam.bot_api.entities.user.User;
 import fr.lukam.bot_api.entities.channels.GuildVoiceChannel;
 
-import java.util.Calendar;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 public interface GuildMember extends User {
@@ -12,7 +12,7 @@ public interface GuildMember extends User {
 
     Set<Role> getRoles();
 
-    Calendar getJoinTime();
+    LocalDateTime getJoinTime();
 
     boolean isOwner();
 

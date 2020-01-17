@@ -1,4 +1,4 @@
-package fr.lukam.bot_api;
+package fr.lukam.bot_api.entities.channels;
 
 public interface ChannelType {
 
