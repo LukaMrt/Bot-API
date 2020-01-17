@@ -42,47 +42,47 @@ public class FakeServerMember implements ServerMember {
 
     @Override
     public void kick(String reason) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void ban(String reason) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void mute() {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void addRoles(Role... roles) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void removeRoles(Role... roles) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void setNickName(String newNickName) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void addPermission(Permission permission) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void removePermission(Permission permission) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void connectToVoiceChannel(ServerVoiceChannel channel) {
-
+        // Empty because it is a null object
     }
 
     @Override
@@ -102,7 +102,7 @@ public class FakeServerMember implements ServerMember {
 
     @Override
     public void sendMessage() {
-
+        // Empty because it is a null object
     }
 
     @Override

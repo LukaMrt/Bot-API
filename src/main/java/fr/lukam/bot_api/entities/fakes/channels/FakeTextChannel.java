@@ -17,12 +17,12 @@ public class FakeTextChannel implements TextChannel {
 
     @Override
     public void setDescription() {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void sendMessage(Message message) {
-
+        // Empty because it is a null object
     }
 
     @Override

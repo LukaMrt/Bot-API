@@ -23,22 +23,22 @@ public class FakeCategory implements Category {
 
     @Override
     public void addPermissionToRole(Role role, Permission permission) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void removePermissionFromRole(Role role, Permission permission) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void addPermissionToMember(ServerMember member, Permission permission) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void removePermissionFromMember(ServerMember member, Permission permission) {
-
+        // Empty because it is a null object
     }
 
     @Override

@@ -73,32 +73,32 @@ public class FakeMessage implements Message {
 
     @Override
     public void addReaction(Emote emote) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void removeReaction(Emote emote) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void pin() {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void unPin() {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void edit(Message newMessage) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void delete() {
-
+        // Empty because it is a null object
     }
 
     @Override

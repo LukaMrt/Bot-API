@@ -26,7 +26,7 @@ public class FakeRole implements Role {
 
     @Override
     public void delete() {
-
+        // Empty because it is a null object
     }
 
     @Override
@@ -41,12 +41,12 @@ public class FakeRole implements Role {
 
     @Override
     public void addPermission(Permission permission) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void removePermission(Permission permission) {
-
+        // Empty because it is a null object
     }
 
     @Override

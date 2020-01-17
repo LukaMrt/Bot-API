@@ -26,7 +26,7 @@ public class FakeUser implements User {
 
     @Override
     public void sendMessage() {
-
+        // Empty because it is a null object
     }
 
     @Override
