@@ -1,29 +1,29 @@
-package fr.lukam.bot_api.entities.interfaces.guild;
+package fr.lukam.bot_api.entities.interfaces.server;
 
 import fr.lukam.bot_api.behaviors.Identifiable;
 import fr.lukam.bot_api.behaviors.Nameable;
 import fr.lukam.bot_api.entities.interfaces.reaction.Emote;
-import fr.lukam.bot_api.entities.interfaces.channels.GuildChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerChannel;
 import fr.lukam.bot_api.entities.interfaces.channels.TextChannel;
-import fr.lukam.bot_api.entities.interfaces.channels.GuildVoiceChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 
 import java.util.List;
 
-public interface Guild extends Identifiable, Nameable {
+public interface Server extends Identifiable, Nameable {
 
     String getDescription();
 
-    GuildMember getOwner();
+    ServerMember getOwner();
 
-    GuildMember getSelfMember();
+    ServerMember getSelfMember();
 
-    GuildChannel getDefaultChannel();
+    ServerChannel getDefaultChannel();
 
     Role getDefaultRole();
 
-    List<GuildMember> getMembers();
+    List<ServerMember> getMembers();
 
-    GuildMember getMemberById(String memberId);
+    ServerMember getMemberById(String memberId);
 
     String getIconURLl();
 
@@ -37,7 +37,7 @@ public interface Guild extends Identifiable, Nameable {
 
     List<TextChannel> getChannels();
 
-    GuildChannel getChannelById(String channelId);
+    ServerChannel getChannelById(String channelId);
 
     List<Category> getCategories();
 
@@ -47,7 +47,7 @@ public interface Guild extends Identifiable, Nameable {
 
     void addTextChannel(TextChannel channel);
 
-    void addVoiceChannel(GuildVoiceChannel textChannel);
+    void addVoiceChannel(ServerVoiceChannel textChannel);
 
     void addRole(Role role);
 

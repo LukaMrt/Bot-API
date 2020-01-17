@@ -1,20 +1,20 @@
-package fr.lukam.bot_api.entities.fakes.guild;
+package fr.lukam.bot_api.entities.fakes.server;
 
-import fr.lukam.bot_api.entities.interfaces.channels.GuildChannel;
-import fr.lukam.bot_api.entities.interfaces.channels.GuildVoiceChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 import fr.lukam.bot_api.entities.interfaces.channels.TextChannel;
-import fr.lukam.bot_api.entities.interfaces.guild.Category;
-import fr.lukam.bot_api.entities.interfaces.guild.Guild;
-import fr.lukam.bot_api.entities.interfaces.guild.GuildMember;
-import fr.lukam.bot_api.entities.interfaces.guild.Role;
+import fr.lukam.bot_api.entities.interfaces.server.Category;
+import fr.lukam.bot_api.entities.interfaces.server.Server;
+import fr.lukam.bot_api.entities.interfaces.server.ServerMember;
+import fr.lukam.bot_api.entities.interfaces.server.Role;
 import fr.lukam.bot_api.entities.interfaces.reaction.Emote;
-import fr.lukam.bot_api.entities.fakes.channels.FakeGuildChannel;
+import fr.lukam.bot_api.entities.fakes.channels.FakeServerChannel;
 import fr.lukam.bot_api.entities.fakes.reaction.FakeEmote;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FakeGuild implements Guild {
+public class FakeServer implements Server {
 
     @Override
     public String getDescription() {
@@ -22,18 +22,18 @@ public class FakeGuild implements Guild {
     }
 
     @Override
-    public GuildMember getOwner() {
-        return new FakeGuildMember();
+    public ServerMember getOwner() {
+        return new FakeServerMember();
     }
 
     @Override
-    public GuildMember getSelfMember() {
-        return new FakeGuildMember();
+    public ServerMember getSelfMember() {
+        return new FakeServerMember();
     }
 
     @Override
-    public GuildChannel getDefaultChannel() {
-        return new FakeGuildChannel();
+    public ServerChannel getDefaultChannel() {
+        return new FakeServerChannel();
     }
 
     @Override
@@ -42,13 +42,13 @@ public class FakeGuild implements Guild {
     }
 
     @Override
-    public List<GuildMember> getMembers() {
+    public List<ServerMember> getMembers() {
         return new ArrayList<>();
     }
 
     @Override
-    public GuildMember getMemberById(String memberId) {
-        return new FakeGuildMember();
+    public ServerMember getMemberById(String memberId) {
+        return new FakeServerMember();
     }
 
     @Override
@@ -82,8 +82,8 @@ public class FakeGuild implements Guild {
     }
 
     @Override
-    public GuildChannel getChannelById(String channelId) {
-        return new FakeGuildChannel();
+    public ServerChannel getChannelById(String channelId) {
+        return new FakeServerChannel();
     }
 
     @Override
@@ -107,7 +107,7 @@ public class FakeGuild implements Guild {
     }
 
     @Override
-    public void addVoiceChannel(GuildVoiceChannel textChannel) {
+    public void addVoiceChannel(ServerVoiceChannel textChannel) {
 
     }
 

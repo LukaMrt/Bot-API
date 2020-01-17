@@ -2,9 +2,9 @@ package fr.lukam.bot_api.entities.interfaces.message;
 
 import fr.lukam.bot_api.behaviors.Identifiable;
 import fr.lukam.bot_api.entities.interfaces.user.User;
-import fr.lukam.bot_api.entities.interfaces.channels.GuildTextChannel;
-import fr.lukam.bot_api.entities.interfaces.guild.GuildMember;
-import fr.lukam.bot_api.entities.interfaces.guild.Role;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
+import fr.lukam.bot_api.entities.interfaces.server.ServerMember;
+import fr.lukam.bot_api.entities.interfaces.server.Role;
 import fr.lukam.bot_api.entities.interfaces.reaction.Emote;
 import fr.lukam.bot_api.entities.interfaces.reaction.Reaction;
 
@@ -17,7 +17,7 @@ public interface Message extends Identifiable {
 
     String getLink();
 
-    GuildMember getSender();
+    ServerMember getSender();
 
     LocalDateTime getDate();
 
@@ -25,7 +25,7 @@ public interface Message extends Identifiable {
 
     List<User> getMentionedUsers();
 
-    List<GuildTextChannel> getMentionedChannels();
+    List<ServerTextChannel> getMentionedChannels();
 
     List<Role> getMentionedRoles();
 

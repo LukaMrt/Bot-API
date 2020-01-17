@@ -1,12 +1,12 @@
-package fr.lukam.bot_api.entities.interfaces.guild;
+package fr.lukam.bot_api.entities.interfaces.server;
 
 import fr.lukam.bot_api.entities.interfaces.user.User;
-import fr.lukam.bot_api.entities.interfaces.channels.GuildVoiceChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 
 import java.time.LocalDateTime;
 import java.util.Set;
 
-public interface GuildMember extends User {
+public interface ServerMember extends User {
 
     String getNickName();
 
@@ -34,6 +34,6 @@ public interface GuildMember extends User {
 
     void removePermission(Permission permission);
 
-    void connectToVoiceChannel(GuildVoiceChannel channel);
+    void connectToVoiceChannel(ServerVoiceChannel channel);
 
 }

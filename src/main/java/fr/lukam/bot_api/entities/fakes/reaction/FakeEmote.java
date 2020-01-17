@@ -5,7 +5,7 @@ import fr.lukam.bot_api.entities.interfaces.reaction.Emote;
 public class FakeEmote implements Emote {
 
     @Override
-    public boolean isGuildEmote() {
+    public boolean isServerEmote() {
         return false;
     }
 

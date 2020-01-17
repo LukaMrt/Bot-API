@@ -6,6 +6,6 @@ import fr.lukam.bot_api.behaviors.Nameable;
 
 public interface Emote extends Identifiable, Mentionable, Nameable {
 
-    boolean isGuildEmote();
+    boolean isServerEmote();
 
 }

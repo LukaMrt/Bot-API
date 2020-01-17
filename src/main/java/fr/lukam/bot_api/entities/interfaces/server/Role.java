@@ -1,4 +1,4 @@
-package fr.lukam.bot_api.entities.interfaces.guild;
+package fr.lukam.bot_api.entities.interfaces.server;
 
 import fr.lukam.bot_api.behaviors.Identifiable;
 import fr.lukam.bot_api.behaviors.Mentionable;

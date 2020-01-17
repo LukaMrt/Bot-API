@@ -1,7 +1,7 @@
-package fr.lukam.bot_api.entities.fakes.guild;
+package fr.lukam.bot_api.entities.fakes.server;
 
-import fr.lukam.bot_api.entities.interfaces.guild.Permission;
-import fr.lukam.bot_api.entities.interfaces.guild.Role;
+import fr.lukam.bot_api.entities.interfaces.server.Permission;
+import fr.lukam.bot_api.entities.interfaces.server.Role;
 
 import java.awt.*;
 import java.util.HashSet;

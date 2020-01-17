@@ -1,11 +1,11 @@
-package fr.lukam.bot_api.entities.fakes.guild;
+package fr.lukam.bot_api.entities.fakes.server;
 
 import fr.lukam.bot_api.entities.interfaces.user.Status;
-import fr.lukam.bot_api.entities.interfaces.channels.GuildVoiceChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 import fr.lukam.bot_api.entities.interfaces.channels.TextChannel;
-import fr.lukam.bot_api.entities.interfaces.guild.GuildMember;
-import fr.lukam.bot_api.entities.interfaces.guild.Permission;
-import fr.lukam.bot_api.entities.interfaces.guild.Role;
+import fr.lukam.bot_api.entities.interfaces.server.ServerMember;
+import fr.lukam.bot_api.entities.interfaces.server.Permission;
+import fr.lukam.bot_api.entities.interfaces.server.Role;
 import fr.lukam.bot_api.entities.fakes.user.FakeStatus;
 import fr.lukam.bot_api.entities.fakes.channels.FakeTextChannel;
 
@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-public class FakeGuildMember implements GuildMember {
+public class FakeServerMember implements ServerMember {
 
     @Override
     public String getNickName() {
@@ -81,7 +81,7 @@ public class FakeGuildMember implements GuildMember {
     }
 
     @Override
-    public void connectToVoiceChannel(GuildVoiceChannel channel) {
+    public void connectToVoiceChannel(ServerVoiceChannel channel) {
 
     }
 

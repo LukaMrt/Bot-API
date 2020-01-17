@@ -1,9 +1,9 @@
 package fr.lukam.bot_api.entities.fakes.message;
 
 import fr.lukam.bot_api.entities.interfaces.user.User;
-import fr.lukam.bot_api.entities.interfaces.channels.GuildTextChannel;
-import fr.lukam.bot_api.entities.interfaces.guild.GuildMember;
-import fr.lukam.bot_api.entities.interfaces.guild.Role;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
+import fr.lukam.bot_api.entities.interfaces.server.ServerMember;
+import fr.lukam.bot_api.entities.interfaces.server.Role;
 import fr.lukam.bot_api.entities.interfaces.message.Message;
 import fr.lukam.bot_api.entities.interfaces.reaction.Emote;
 import fr.lukam.bot_api.entities.interfaces.reaction.Reaction;
@@ -27,7 +27,7 @@ public class FakeMessage implements Message {
     }
 
     @Override
-    public GuildMember getSender() {
+    public ServerMember getSender() {
         return null;
     }
 
@@ -47,7 +47,7 @@ public class FakeMessage implements Message {
     }
 
     @Override
-    public List<GuildTextChannel> getMentionedChannels() {
+    public List<ServerTextChannel> getMentionedChannels() {
         return new ArrayList<>();
     }
 
