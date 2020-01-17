@@ -1,6 +1,6 @@
 package fr.lukam.bot_api;
 
-import fr.lukam.bot_api.behavior.Nameable;
+import fr.lukam.bot_api.behaviors.Nameable;
 
 import java.awt.*;
 

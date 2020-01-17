@@ -1,6 +1,6 @@
 package fr.lukam.bot_api.entities.channels;
 
-import fr.lukam.bot_api.behavior.Nameable;
+import fr.lukam.bot_api.behaviors.Nameable;
 import fr.lukam.bot_api.entities.message.Message;
 
 import java.util.List;

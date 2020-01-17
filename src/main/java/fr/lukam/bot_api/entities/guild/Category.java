@@ -1,7 +1,7 @@
 package fr.lukam.bot_api.entities.guild;
 
-import fr.lukam.bot_api.behavior.Identifiable;
-import fr.lukam.bot_api.behavior.Nameable;
+import fr.lukam.bot_api.behaviors.Identifiable;
+import fr.lukam.bot_api.behaviors.Nameable;
 import fr.lukam.bot_api.entities.channels.GuildChannel;
 
 import java.util.List;

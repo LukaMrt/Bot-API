@@ -1,4 +1,4 @@
-package fr.lukam.bot_api.behavior;
+package fr.lukam.bot_api.behaviors;
 
 public interface Mentionable {
 
