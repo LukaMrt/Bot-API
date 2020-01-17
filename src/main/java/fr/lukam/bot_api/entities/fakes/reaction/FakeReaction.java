@@ -26,12 +26,12 @@ public class FakeReaction implements Reaction {
 
     @Override
     public void removeAll() {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void removeFromUser(User user) {
-
+        // Empty because it is a null object
     }
 
 }

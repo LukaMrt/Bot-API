@@ -98,27 +98,27 @@ public class FakeServer implements Server {
 
     @Override
     public void addCategory(Category category) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void addTextChannel(TextChannel channel) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void addVoiceChannel(ServerVoiceChannel textChannel) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void addRole(Role role) {
-
+        // Empty because it is a null object
     }
 
     @Override
     public void unBan(String userId) {
-
+        // Empty because it is a null object
     }
 
     @Override
