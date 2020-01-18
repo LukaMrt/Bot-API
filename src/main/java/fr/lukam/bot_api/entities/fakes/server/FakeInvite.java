@@ -15,4 +15,9 @@ public class FakeInvite implements Invite {
         return new FakeServerMember();
     }
 
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
 }

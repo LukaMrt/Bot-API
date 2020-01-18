@@ -1,5 +1,6 @@
 package fr.lukam.bot_api.entities.interfaces.server;
 
+import fr.lukam.bot_api.behaviors.Fakeable;
 import fr.lukam.bot_api.behaviors.Identifiable;
 import fr.lukam.bot_api.behaviors.Nameable;
 import fr.lukam.bot_api.entities.interfaces.reaction.Emote;
@@ -9,7 +10,7 @@ import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 
 import java.util.List;
 
-public interface Server extends Identifiable, Nameable {
+public interface Server extends Identifiable, Nameable, Fakeable {
 
     String getDescription();
 

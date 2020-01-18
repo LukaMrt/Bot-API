@@ -18,6 +18,8 @@ public interface ServerMember extends User {
 
     boolean hashPermissions(Permission... permissions);
 
+    boolean hasRoles(Role... roles);
+
     void kick(String reason);
 
     void ban(String reason);

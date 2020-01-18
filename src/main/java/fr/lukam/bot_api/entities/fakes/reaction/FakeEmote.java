@@ -24,4 +24,9 @@ public class FakeEmote implements Emote {
         return "";
     }
 
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
 }

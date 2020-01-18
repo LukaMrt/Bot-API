@@ -34,4 +34,9 @@ public class FakeReaction implements Reaction {
         // Empty because it is a null object
     }
 
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
 }

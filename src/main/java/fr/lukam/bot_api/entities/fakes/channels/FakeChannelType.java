@@ -9,4 +9,9 @@ public class FakeChannelType implements ChannelType {
         return "";
     }
 
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
 }

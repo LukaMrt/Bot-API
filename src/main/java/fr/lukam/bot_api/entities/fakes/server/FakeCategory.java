@@ -51,4 +51,9 @@ public class FakeCategory implements Category {
         return "";
     }
 
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
 }

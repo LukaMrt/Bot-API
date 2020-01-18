@@ -55,4 +55,8 @@ public class FakeTextChannel implements TextChannel {
         return new FakeChannelType();
     }
 
+    @Override
+    public boolean isFake() {
+        return true;
+    }
 }

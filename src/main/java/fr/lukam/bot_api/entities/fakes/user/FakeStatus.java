@@ -16,4 +16,9 @@ public class FakeStatus implements Status {
         return "";
     }
 
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
 }
