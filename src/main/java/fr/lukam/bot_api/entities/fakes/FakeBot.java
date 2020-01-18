@@ -6,7 +6,7 @@ import fr.lukam.bot_api.entities.interfaces.server.Server;
 import fr.lukam.bot_api.entities.fakes.server.FakeServer;
 import fr.lukam.bot_api.entities.fakes.user.FakeUser;
 
-public class NullBot implements Bot {
+public class FakeBot implements Bot {
 
     @Override
     public Server getServer(String serverId) {
@@ -21,6 +21,11 @@ public class NullBot implements Bot {
     @Override
     public User getUser(String userId) {
         return new FakeUser();
+    }
+
+    @Override
+    public boolean isFake() {
+        return true;
     }
 
 }

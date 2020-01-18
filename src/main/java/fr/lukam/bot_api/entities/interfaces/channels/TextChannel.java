@@ -1,11 +1,12 @@
 package fr.lukam.bot_api.entities.interfaces.channels;
 
+import fr.lukam.bot_api.behaviors.Fakeable;
 import fr.lukam.bot_api.behaviors.Nameable;
 import fr.lukam.bot_api.entities.interfaces.message.Message;
 
 import java.util.List;
 
-public interface TextChannel extends Channel, Nameable {
+public interface TextChannel extends Channel, Nameable, Fakeable {
 
     String getDescription();
 

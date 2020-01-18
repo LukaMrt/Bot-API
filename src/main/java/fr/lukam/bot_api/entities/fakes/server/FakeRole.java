@@ -64,4 +64,9 @@ public class FakeRole implements Role {
         return "";
     }
 
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
 }

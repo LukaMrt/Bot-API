@@ -41,6 +41,11 @@ public class FakeServerMember implements ServerMember {
     }
 
     @Override
+    public boolean hasRoles(Role... roles) {
+        return false;
+    }
+
+    @Override
     public void kick(String reason) {
         // Empty because it is a null object
     }
@@ -128,6 +133,11 @@ public class FakeServerMember implements ServerMember {
     @Override
     public String getName() {
         return "";
+    }
+
+    @Override
+    public boolean isFake() {
+        return true;
     }
 
 }

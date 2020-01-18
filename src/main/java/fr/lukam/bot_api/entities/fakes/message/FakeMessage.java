@@ -1,8 +1,8 @@
 package fr.lukam.bot_api.entities.fakes.message;
 
+import fr.lukam.bot_api.entities.interfaces.message.Embed;
 import fr.lukam.bot_api.entities.interfaces.user.User;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
-import fr.lukam.bot_api.entities.interfaces.server.ServerMember;
 import fr.lukam.bot_api.entities.interfaces.server.Role;
 import fr.lukam.bot_api.entities.interfaces.message.Message;
 import fr.lukam.bot_api.entities.interfaces.reaction.Emote;
@@ -18,17 +18,17 @@ public class FakeMessage implements Message {
 
     @Override
     public String getContent() {
-        return null;
+        return "";
+    }
+
+    @Override
+    public Embed getEmbed() {
+        return new FakeEmbed();
     }
 
     @Override
     public String getLink() {
-        return null;
-    }
-
-    @Override
-    public ServerMember getSender() {
-        return null;
+        return "";
     }
 
     @Override
@@ -104,6 +104,11 @@ public class FakeMessage implements Message {
     @Override
     public String getId() {
         return "";
+    }
+
+    @Override
+    public boolean isFake() {
+        return true;
     }
 
 }

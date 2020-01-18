@@ -131,4 +131,9 @@ public class FakeServer implements Server {
         return "";
     }
 
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
 }

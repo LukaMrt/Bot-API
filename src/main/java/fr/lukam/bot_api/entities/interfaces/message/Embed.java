@@ -1,42 +1,25 @@
 package fr.lukam.bot_api.entities.interfaces.message;
 
+import fr.lukam.bot_api.behaviors.Fakeable;
 import fr.lukam.bot_api.entities.interfaces.user.User;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.List;
 
-public interface Embed {
+public interface Embed extends Fakeable {
 
     User getAuthor();
 
-    void setAuthor(User user);
-
-    List<Field> getFields();
-
-    void addField(Field field);
-
-    void setFields(Field... fields);
-
-    void clearFields();
+    String getTitle();
 
     String getDescription();
 
-    void setDescription(String description);
-
     Color getColor();
 
-    void setColor(Color color);
+    List<Field> getFields();
 
     String getFooter();
 
-    void setFooter(String footer);
-
-    String getTitle();
-
-    void setTitle(String title);
-
     String getImageURL();
-
-    void setImageURL(String url);
 
 }

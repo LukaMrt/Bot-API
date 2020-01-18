@@ -54,4 +54,9 @@ public class FakeUser implements User {
         return "";
     }
 
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
 }

@@ -1,6 +1,8 @@
 package fr.lukam.bot_api.entities.interfaces.server;
 
-public interface Invite {
+import fr.lukam.bot_api.behaviors.Fakeable;
+
+public interface Invite extends Fakeable {
 
     String getURL();
 
