@@ -1,5 +1,6 @@
 package fr.lukam.bot_api.entities.interfaces.server;
 
+import fr.lukam.bot_api.entities.interfaces.user.Status;
 import fr.lukam.bot_api.entities.interfaces.user.User;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 
@@ -32,10 +33,8 @@ public interface ServerMember extends User {
 
     void setNickName(String newNickName);
 
-    void addPermission(Permission permission);
-
-    void removePermission(Permission permission);
-
     void connectToVoiceChannel(ServerVoiceChannel channel);
+
+    Status getStatus();
 
 }

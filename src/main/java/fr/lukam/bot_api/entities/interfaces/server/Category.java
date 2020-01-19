@@ -21,4 +21,8 @@ public interface Category extends Identifiable, Nameable, Fakeable {
 
     void removePermissionFromMember(ServerMember member, Permission permission);
 
+    void addChannel(ServerChannel serverChannel);
+
+    void removeChannel(ServerChannel serverChannel);
+
 }

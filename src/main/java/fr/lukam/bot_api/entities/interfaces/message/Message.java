@@ -31,9 +31,10 @@ public interface Message extends Identifiable, Fakeable {
 
     List<Emote> getEmotes();
 
-    Reaction getReactionByName();
+    Reaction getReactionById(String emoteId);
 
     User getAuthor();
+
 
     void addReaction(Emote emote);
 

@@ -18,6 +18,14 @@ public abstract class API {
         API.bot = bot;
     }
 
+    public static void setEmbedBuilder(EmbedBuilder embedBuilder) {
+        API.embedBuilder = embedBuilder;
+    }
+
+    public static void setMessageBuilder(MessageBuilder messageBuilder) {
+        API.messageBuilder = messageBuilder;
+    }
+
     public static Server getServer(String serverId) {
         return bot.getServer(serverId);
     }

@@ -29,7 +29,6 @@ public class FakeUser implements User {
         // Empty because it is a null object
     }
 
-    @Override
     public Status getStatus() {
         return new FakeStatus();
     }

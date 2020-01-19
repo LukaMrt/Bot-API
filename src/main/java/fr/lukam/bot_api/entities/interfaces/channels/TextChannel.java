@@ -8,13 +8,9 @@ import java.util.List;
 
 public interface TextChannel extends Channel, Nameable, Fakeable {
 
-    String getDescription();
-
-    void setDescription();
-
     void sendMessage(Message message);
 
-    Message getMessageById();
+    Message getMessageById(String messageId);
 
     List<Message> getHistoryBefore(Message message, boolean include, int count);
 

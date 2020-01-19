@@ -6,9 +6,9 @@ public interface MessageBuilder extends Fakeable {
 
     MessageBuilder aMessage();
 
-    void setText(String text);
+    MessageBuilder setText(String text);
 
-    void setEmbed(Embed embed);
+    MessageBuilder setEmbed(Embed embed);
 
     Message build();
 
