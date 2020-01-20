@@ -9,23 +9,23 @@ public interface EmbedBuilder extends Fakeable {
 
     EmbedBuilder anEmbed();
 
-    void setImageURL(String url);
+    EmbedBuilder setImageURL(String url);
 
-    void setAuthor(User user);
+    EmbedBuilder setAuthor(User user);
 
-    void addField(Field field);
+    EmbedBuilder addField(Field field);
 
-    void setFields(Field... fields);
+    EmbedBuilder setFields(Field... fields);
 
-    void clearFields();
+    EmbedBuilder clearFields();
 
-    void setDescription(String description);
+    EmbedBuilder setDescription(String description);
 
-    void setColor(Color color);
+    EmbedBuilder setColor(Color color);
 
-    void setFooter(String footer);
+    EmbedBuilder setFooter(String footer);
 
-    void setTitle(String title);
+    EmbedBuilder setTitle(String title);
 
     Embed build();
 

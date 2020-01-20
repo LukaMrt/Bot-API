@@ -3,9 +3,8 @@ package fr.lukam.bot_api.entities.interfaces.server;
 import fr.lukam.bot_api.behaviors.Fakeable;
 import fr.lukam.bot_api.behaviors.Identifiable;
 import fr.lukam.bot_api.behaviors.Nameable;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
 import fr.lukam.bot_api.entities.interfaces.reaction.Emote;
-import fr.lukam.bot_api.entities.interfaces.channels.ServerChannel;
-import fr.lukam.bot_api.entities.interfaces.channels.TextChannel;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 
 import java.util.List;
@@ -18,7 +17,7 @@ public interface Server extends Identifiable, Nameable, Fakeable {
 
     ServerMember getSelfMember();
 
-    ServerChannel getDefaultChannel();
+    ServerTextChannel getDefaultChannel();
 
     Role getDefaultRole();
 
@@ -34,11 +33,15 @@ public interface Server extends Identifiable, Nameable, Fakeable {
 
     List<Emote> getCustomEmotes();
 
-    Emote getMemberByName(String emoteName);
+    Emote getEmoteById(String emoteId);
 
-    List<TextChannel> getChannels();
+    List<ServerTextChannel> getTextChannels();
 
-    ServerChannel getChannelById(String channelId);
+    List<ServerVoiceChannel> getVoiceChannels();
+
+    ServerTextChannel getTextChannel(String channelId);
+
+    ServerVoiceChannel getVoiceChannel(String channelId);
 
     List<Category> getCategories();
 
@@ -46,9 +49,9 @@ public interface Server extends Identifiable, Nameable, Fakeable {
 
     void addCategory(Category category);
 
-    void addTextChannel(TextChannel channel);
+    void addTextChannel(ServerTextChannel channel);
 
-    void addVoiceChannel(ServerVoiceChannel textChannel);
+    void addVoiceChannel(ServerVoiceChannel channel);
 
     void addRole(Role role);
 
