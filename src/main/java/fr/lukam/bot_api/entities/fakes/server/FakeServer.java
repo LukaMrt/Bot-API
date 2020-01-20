@@ -1,15 +1,13 @@
 package fr.lukam.bot_api.entities.fakes.server;
 
-import fr.lukam.bot_api.entities.interfaces.channels.ServerChannel;
+import fr.lukam.bot_api.entities.fakes.channels.FakeServerTextChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
-import fr.lukam.bot_api.entities.interfaces.channels.TextChannel;
 import fr.lukam.bot_api.entities.interfaces.server.Category;
 import fr.lukam.bot_api.entities.interfaces.server.Server;
 import fr.lukam.bot_api.entities.interfaces.server.ServerMember;
 import fr.lukam.bot_api.entities.interfaces.server.Role;
 import fr.lukam.bot_api.entities.interfaces.reaction.Emote;
-import fr.lukam.bot_api.entities.fakes.channels.FakeServerChannel;
-import fr.lukam.bot_api.entities.fakes.reaction.FakeEmote;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,8 +30,8 @@ public class FakeServer implements Server {
     }
 
     @Override
-    public ServerChannel getDefaultChannel() {
-        return new FakeServerChannel();
+    public ServerTextChannel getDefaultChannel() {
+        return new FakeServerTextChannel();
     }
 
     @Override
@@ -72,18 +70,28 @@ public class FakeServer implements Server {
     }
 
     @Override
-    public Emote getMemberByName(String emoteName) {
-        return new FakeEmote();
+    public Emote getEmoteById(String emoteId) {
+        return null;
     }
 
     @Override
-    public List<TextChannel> getChannels() {
-        return new ArrayList<>();
+    public List<ServerTextChannel> getTextChannels() {
+        return null;
     }
 
     @Override
-    public ServerChannel getChannelById(String channelId) {
-        return new FakeServerChannel();
+    public List<ServerVoiceChannel> getVoiceChannels() {
+        return null;
+    }
+
+    @Override
+    public ServerTextChannel getTextChannel(String channelId) {
+        return null;
+    }
+
+    @Override
+    public ServerVoiceChannel getVoiceChannel(String channelId) {
+        return null;
     }
 
     @Override
@@ -102,7 +110,7 @@ public class FakeServer implements Server {
     }
 
     @Override
-    public void addTextChannel(TextChannel channel) {
+    public void addTextChannel(ServerTextChannel channel) {
         // Empty because it is a null object
     }
 

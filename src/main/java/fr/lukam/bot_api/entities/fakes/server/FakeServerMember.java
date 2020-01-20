@@ -1,5 +1,6 @@
 package fr.lukam.bot_api.entities.fakes.server;
 
+import fr.lukam.bot_api.entities.interfaces.message.Message;
 import fr.lukam.bot_api.entities.interfaces.user.Status;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 import fr.lukam.bot_api.entities.interfaces.channels.TextChannel;
@@ -76,16 +77,6 @@ public class FakeServerMember implements ServerMember {
     }
 
     @Override
-    public void addPermission(Permission permission) {
-        // Empty because it is a null object
-    }
-
-    @Override
-    public void removePermission(Permission permission) {
-        // Empty because it is a null object
-    }
-
-    @Override
     public void connectToVoiceChannel(ServerVoiceChannel channel) {
         // Empty because it is a null object
     }
@@ -106,7 +97,7 @@ public class FakeServerMember implements ServerMember {
     }
 
     @Override
-    public void sendMessage() {
+    public void sendMessage(Message message) {
         // Empty because it is a null object
     }
 

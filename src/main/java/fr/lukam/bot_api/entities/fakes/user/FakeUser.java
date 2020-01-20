@@ -1,5 +1,6 @@
 package fr.lukam.bot_api.entities.fakes.user;
 
+import fr.lukam.bot_api.entities.interfaces.message.Message;
 import fr.lukam.bot_api.entities.interfaces.user.Status;
 import fr.lukam.bot_api.entities.interfaces.user.User;
 import fr.lukam.bot_api.entities.interfaces.channels.TextChannel;
@@ -25,7 +26,7 @@ public class FakeUser implements User {
     }
 
     @Override
-    public void sendMessage() {
+    public void sendMessage(Message message) {
         // Empty because it is a null object
     }
 
