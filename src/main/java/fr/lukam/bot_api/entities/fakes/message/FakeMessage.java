@@ -62,7 +62,7 @@ public class FakeMessage implements Message {
     }
 
     @Override
-    public Reaction getReactionByName() {
+    public Reaction getReactionById(String emoteId) {
         return new FakeReaction();
     }
 
