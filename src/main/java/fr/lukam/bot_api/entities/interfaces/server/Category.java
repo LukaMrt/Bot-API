@@ -4,6 +4,8 @@ import fr.lukam.bot_api.behaviors.Fakeable;
 import fr.lukam.bot_api.behaviors.Identifiable;
 import fr.lukam.bot_api.behaviors.Nameable;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 
 import java.util.List;
 
@@ -17,12 +19,12 @@ public interface Category extends Identifiable, Nameable, Fakeable {
 
     void removePermissionFromRole(Role role, Permission permission);
 
-    void addPermissionToMember(ServerMember member, Permission permission);
+    void addChannel(ServerTextChannel serverChannel);
 
-    void removePermissionFromMember(ServerMember member, Permission permission);
+    void addChannel(ServerVoiceChannel serverChannel);
 
-    void addChannel(ServerChannel serverChannel);
+    void removeChannel(ServerTextChannel serverChannel);
 
-    void removeChannel(ServerChannel serverChannel);
+    void removeChannel(ServerVoiceChannel serverChannel);
 
 }

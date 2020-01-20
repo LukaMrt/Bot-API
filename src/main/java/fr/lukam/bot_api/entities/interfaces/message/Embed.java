@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface Embed extends Fakeable {
 
-    User getAuthor();
+    String getAuthorName();
 
     String getTitle();
 
