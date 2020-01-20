@@ -1,6 +1,8 @@
 package fr.lukam.bot_api.entities.fakes.server;
 
 import fr.lukam.bot_api.entities.fakes.channels.FakeServerTextChannel;
+import fr.lukam.bot_api.entities.fakes.channels.FakeServerVoiceChannel;
+import fr.lukam.bot_api.entities.fakes.reaction.FakeEmote;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 import fr.lukam.bot_api.entities.interfaces.server.Category;
@@ -71,27 +73,27 @@ public class FakeServer implements Server {
 
     @Override
     public Emote getEmoteById(String emoteId) {
-        return null;
+        return new FakeEmote();
     }
 
     @Override
     public List<ServerTextChannel> getTextChannels() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
     public List<ServerVoiceChannel> getVoiceChannels() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override
     public ServerTextChannel getTextChannel(String channelId) {
-        return null;
+        return new FakeServerTextChannel();
     }
 
     @Override
     public ServerVoiceChannel getVoiceChannel(String channelId) {
-        return null;
+        return new FakeServerVoiceChannel();
     }
 
     @Override
