@@ -1,6 +1,8 @@
 package fr.lukam.bot_api.entities.fakes.server;
 
 import fr.lukam.bot_api.entities.interfaces.channels.ServerChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 import fr.lukam.bot_api.entities.interfaces.server.Category;
 import fr.lukam.bot_api.entities.interfaces.server.ServerMember;
 import fr.lukam.bot_api.entities.interfaces.server.Permission;
@@ -32,22 +34,22 @@ public class FakeCategory implements Category {
     }
 
     @Override
-    public void addPermissionToMember(ServerMember member, Permission permission) {
+    public void addChannel(ServerTextChannel serverChannel) {
         // Empty because it is a null object
     }
 
     @Override
-    public void removePermissionFromMember(ServerMember member, Permission permission) {
+    public void addChannel(ServerVoiceChannel serverChannel) {
         // Empty because it is a null object
     }
 
     @Override
-    public void addChannel(ServerChannel serverChannel) {
+    public void removeChannel(ServerTextChannel serverChannel) {
         // Empty because it is a null object
     }
 
     @Override
-    public void removeChannel(ServerChannel serverChannel) {
+    public void removeChannel(ServerVoiceChannel serverChannel) {
         // Empty because it is a null object
     }
 
