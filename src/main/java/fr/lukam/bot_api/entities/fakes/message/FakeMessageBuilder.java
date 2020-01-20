@@ -12,13 +12,13 @@ public class FakeMessageBuilder implements MessageBuilder {
     }
 
     @Override
-    public void setText(String text) {
-        // Empty because it is a null object
+    public MessageBuilder setText(String text) {
+        return this;
     }
 
     @Override
-    public void setEmbed(Embed embed) {
-        // Empty because it is a null object
+    public MessageBuilder setEmbed(Embed embed) {
+        return this;
     }
 
     @Override

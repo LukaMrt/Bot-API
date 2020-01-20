@@ -1,14 +1,30 @@
 package fr.lukam.bot_api.entities.fakes.channels;
 
-import fr.lukam.bot_api.entities.interfaces.channels.ChannelType;
-import fr.lukam.bot_api.entities.interfaces.channels.TextChannel;
-import fr.lukam.bot_api.entities.interfaces.message.Message;
 import fr.lukam.bot_api.entities.fakes.message.FakeMessage;
+import fr.lukam.bot_api.entities.fakes.server.FakeInvite;
+import fr.lukam.bot_api.entities.interfaces.channels.ChannelType;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
+import fr.lukam.bot_api.entities.interfaces.message.Message;
+import fr.lukam.bot_api.entities.interfaces.server.Invite;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FakeTextChannel implements TextChannel {
+public class FakeServerTextChannel implements ServerTextChannel {
+    @Override
+    public Invite createInvite() {
+        return new FakeInvite();
+    }
+
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
+    @Override
+    public String getId() {
+        return "";
+    }
 
     @Override
     public void sendMessage(Message message) {
@@ -43,11 +59,6 @@ public class FakeTextChannel implements TextChannel {
     @Override
     public ChannelType getChannelType() {
         return new FakeChannelType();
-    }
-
-    @Override
-    public boolean isFake() {
-        return true;
     }
 
 }

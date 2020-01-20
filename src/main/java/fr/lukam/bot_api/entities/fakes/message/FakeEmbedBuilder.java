@@ -15,48 +15,48 @@ public class FakeEmbedBuilder implements EmbedBuilder {
     }
 
     @Override
-    public void setImageURL(String url) {
-        // Empty because it is a null object
+    public EmbedBuilder setImageURL(String url) {
+        return this;
     }
 
     @Override
-    public void setAuthor(User user) {
-        // Empty because it is a null object
+    public EmbedBuilder setAuthor(User user) {
+        return this;
     }
 
     @Override
-    public void addField(Field field) {
-        // Empty because it is a null object
+    public EmbedBuilder addField(Field field) {
+        return this;
     }
 
     @Override
-    public void setFields(Field... fields) {
-        // Empty because it is a null object
+    public EmbedBuilder setFields(Field... fields) {
+        return this;
     }
 
     @Override
-    public void clearFields() {
-        // Empty because it is a null object
+    public EmbedBuilder clearFields() {
+        return this;
     }
 
     @Override
-    public void setDescription(String description) {
-        // Empty because it is a null object
+    public EmbedBuilder setDescription(String description) {
+        return this;
     }
 
     @Override
-    public void setColor(Color color) {
-        // Empty because it is a null object
+    public EmbedBuilder setColor(Color color) {
+        return this;
     }
 
     @Override
-    public void setFooter(String footer) {
-        // Empty because it is a null object
+    public EmbedBuilder setFooter(String footer) {
+        return this;
     }
 
     @Override
-    public void setTitle(String title) {
-        // Empty because it is a null object
+    public EmbedBuilder setTitle(String title) {
+        return this;
     }
 
     @Override
