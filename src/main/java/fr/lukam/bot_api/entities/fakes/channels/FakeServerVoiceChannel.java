@@ -51,4 +51,8 @@ public class FakeServerVoiceChannel implements ServerVoiceChannel {
         return new FakeChannelType();
     }
 
+    @Override
+    public String getName() {
+        return "";
+    }
 }

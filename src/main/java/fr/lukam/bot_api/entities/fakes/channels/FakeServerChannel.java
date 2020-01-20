@@ -27,4 +27,9 @@ public class FakeServerChannel implements ServerChannel {
         return true;
     }
 
+    @Override
+    public String getName() {
+        return "";
+    }
+
 }

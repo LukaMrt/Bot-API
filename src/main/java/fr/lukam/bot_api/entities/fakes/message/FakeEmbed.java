@@ -1,9 +1,7 @@
 package fr.lukam.bot_api.entities.fakes.message;
 
-import fr.lukam.bot_api.entities.fakes.user.FakeUser;
 import fr.lukam.bot_api.entities.interfaces.message.Embed;
 import fr.lukam.bot_api.entities.interfaces.message.Field;
-import fr.lukam.bot_api.entities.interfaces.user.User;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -12,8 +10,8 @@ import java.util.List;
 public class FakeEmbed implements Embed {
 
     @Override
-    public User getAuthor() {
-        return new FakeUser();
+    public String getAuthorName() {
+        return "";
     }
 
     @Override
