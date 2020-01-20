@@ -98,7 +98,7 @@ public class FakeServerMember implements ServerMember {
 
     @Override
     public void sendMessage(Message message) {
-
+        // Empty because it is a null object
     }
 
     @Override

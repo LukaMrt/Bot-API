@@ -111,7 +111,7 @@ public class FakeServer implements Server {
 
     @Override
     public void addTextChannel(ServerTextChannel channel) {
-
+        // Empty because it is a null object
     }
 
     @Override
