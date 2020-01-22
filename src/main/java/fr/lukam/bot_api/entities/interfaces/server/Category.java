@@ -19,12 +19,10 @@ public interface Category extends Identifiable, Nameable, Fakeable {
 
     void removePermissionFromRole(Role role, Permission permission);
 
-    void addChannel(ServerTextChannel serverChannel);
+    void addTextChannel(ServerTextChannel serverChannel);
 
-    void addChannel(ServerVoiceChannel serverChannel);
+    void addVoiceChannel(ServerVoiceChannel serverChannel);
 
-    void removeChannel(ServerTextChannel serverChannel);
-
-    void removeChannel(ServerVoiceChannel serverChannel);
+    void removeChannel(ServerChannel serverChannel);
 
 }

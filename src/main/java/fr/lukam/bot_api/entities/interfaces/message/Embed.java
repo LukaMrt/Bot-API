@@ -10,6 +10,8 @@ public interface Embed extends Fakeable {
 
     String getAuthorName();
 
+    String getAuthorImageUrl();
+
     String getTitle();
 
     String getDescription();

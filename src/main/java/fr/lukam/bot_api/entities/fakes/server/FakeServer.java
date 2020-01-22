@@ -3,6 +3,7 @@ package fr.lukam.bot_api.entities.fakes.server;
 import fr.lukam.bot_api.entities.fakes.channels.FakeServerTextChannel;
 import fr.lukam.bot_api.entities.fakes.channels.FakeServerVoiceChannel;
 import fr.lukam.bot_api.entities.fakes.reaction.FakeEmote;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerChannel;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
 import fr.lukam.bot_api.entities.interfaces.server.Category;
@@ -118,6 +119,11 @@ public class FakeServer implements Server {
 
     @Override
     public void addVoiceChannel(ServerVoiceChannel textChannel) {
+        // Empty because it is a null object
+    }
+
+    @Override
+    public void removeChannel(ServerChannel channel) {
         // Empty because it is a null object
     }
 

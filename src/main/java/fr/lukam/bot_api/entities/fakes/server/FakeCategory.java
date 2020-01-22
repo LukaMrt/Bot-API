@@ -34,22 +34,17 @@ public class FakeCategory implements Category {
     }
 
     @Override
-    public void addChannel(ServerTextChannel serverChannel) {
+    public void addTextChannel(ServerTextChannel serverChannel) {
         // Empty because it is a null object
     }
 
     @Override
-    public void addChannel(ServerVoiceChannel serverChannel) {
+    public void addVoiceChannel(ServerVoiceChannel serverChannel) {
         // Empty because it is a null object
     }
 
     @Override
-    public void removeChannel(ServerTextChannel serverChannel) {
-        // Empty because it is a null object
-    }
-
-    @Override
-    public void removeChannel(ServerVoiceChannel serverChannel) {
+    public void removeChannel(ServerChannel serverChannel) {
         // Empty because it is a null object
     }
 
