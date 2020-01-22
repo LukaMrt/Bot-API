@@ -53,4 +53,8 @@ public abstract class API {
         return messageBuilder.aMessage();
     }
 
+    public static FieldBuilder createField() {
+        return fieldBuilder.aField();
+    }
+
 }

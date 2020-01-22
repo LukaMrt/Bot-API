@@ -3,6 +3,7 @@ package fr.lukam.bot_api.entities.interfaces.server;
 import fr.lukam.bot_api.behaviors.Fakeable;
 import fr.lukam.bot_api.behaviors.Identifiable;
 import fr.lukam.bot_api.behaviors.Nameable;
+import fr.lukam.bot_api.entities.interfaces.channels.ServerChannel;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerTextChannel;
 import fr.lukam.bot_api.entities.interfaces.reaction.Emote;
 import fr.lukam.bot_api.entities.interfaces.channels.ServerVoiceChannel;
@@ -52,6 +53,8 @@ public interface Server extends Identifiable, Nameable, Fakeable {
     void addTextChannel(ServerTextChannel channel);
 
     void addVoiceChannel(ServerVoiceChannel channel);
+
+    void removeChannel(ServerChannel channel);
 
     void addRole(Role role);
 

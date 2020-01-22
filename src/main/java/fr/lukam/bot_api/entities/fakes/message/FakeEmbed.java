@@ -15,6 +15,11 @@ public class FakeEmbed implements Embed {
     }
 
     @Override
+    public String getAuthorImageUrl() {
+        return "";
+    }
+
+    @Override
     public List<Field> getFields() {
         return new ArrayList<>();
     }
