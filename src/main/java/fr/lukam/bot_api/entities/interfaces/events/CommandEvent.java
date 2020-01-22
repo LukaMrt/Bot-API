@@ -7,6 +7,10 @@ import fr.lukam.bot_api.entities.interfaces.user.User;
 
 public interface CommandEvent {
 
+    char getPrefix();
+
+    String[] getArgs();
+
     User getUser();
 
     TextChannel getChannel();
