@@ -37,7 +37,7 @@ public class FakeServerMember implements ServerMember {
     }
 
     @Override
-    public boolean hashPermissions(Permission... permissions) {
+    public boolean hasPermissions(Permission... permissions) {
         return false;
     }
 

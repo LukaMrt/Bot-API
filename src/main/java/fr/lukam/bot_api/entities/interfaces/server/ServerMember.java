@@ -17,7 +17,7 @@ public interface ServerMember extends User {
 
     boolean isOwner();
 
-    boolean hashPermissions(Permission... permissions);
+    boolean hasPermissions(Permission... permissions);
 
     boolean hasRoles(Role... roles);
 
