@@ -12,38 +12,51 @@ import java.util.function.Predicate;
 
 public abstract class Command {
 
-    protected String commandName = "";
-    protected String help = "";
-    protected CommandCategory commandCategory = new FakeCommandCategory();
-    protected String arguments = "";
-    protected boolean serverOnly = false;
-    protected boolean ownerCommand = false;
-    protected Role[] requiredRoles = new Role[]{};
-    protected Permission[] requiredUserPermissions = new Permission[]{};
-    protected Permission[] requiredBotPermissions = new Permission[]{};
-    protected Command[] subCommands = new Command[]{};
-    protected Command[] parents = new Command[]{};
+    private final Predicate<Server> BOT_REQUIREMENTS = server ->
+            !server.isFake() && server.getSelfMember().hasPermissions(this.requiredBotPermissions);
+
+    private final Predicate<ServerMember> MEMBER_REQUIREMENTS = serverMember ->
+            serverMember.hasPermissions(this.requiredUserPermissions) && serverMember.hasRoles(this.requiredRoles);
+
+    protected String commandName;
+    protected String help;
+    protected CommandCategory commandCategory;
+    protected String arguments;
+    protected boolean serverOnly;
+    protected boolean ownerCommand;
+    protected Role[] requiredRoles;
+    protected Permission[] requiredUserPermissions;
+    protected Permission[] requiredBotPermissions;
+    protected Command[] subCommands;
+    protected Command[] parents;
+
+    public Command() {
+        this.commandName = "";
+        this.help = "";
+        this.commandCategory = new FakeCommandCategory();
+        this.arguments = "";
+        this.serverOnly = false;
+        this.ownerCommand = false;
+        this.requiredRoles = new Role[]{};
+        this.requiredUserPermissions = new Permission[]{};
+        this.requiredBotPermissions = new Permission[]{};
+        this.subCommands = new Command[]{};
+        this.parents = new Command[]{};
+    }
 
     public abstract void execute(CommandEvent event);
 
     public boolean canExecute(CommandEvent event) {
 
-        if (!Arrays.stream(this.parents).allMatch(command -> command.canExecute(event))) {
-            return false;
-        }
+        boolean parentsRequirements = Arrays.stream(this.parents).allMatch(command -> command.canExecute(event));
+        boolean botRequirements = BOT_REQUIREMENTS.test(event.getServer());
+        boolean memberRequirements = MEMBER_REQUIREMENTS.test((ServerMember) event.getUser());
 
-        Predicate<ServerMember> canMemberExecute = serverMember -> serverMember.hashPermissions(requiredUserPermissions)
-                && serverMember.hasRoles(requiredRoles);
-
-        Predicate<Server> canBotExecute = server -> !server.isFake()
-                && server.getSelfMember().hashPermissions(requiredBotPermissions);
-
-        if (serverOnly && (!canBotExecute.test(event.getServer()) || !canMemberExecute.test((ServerMember) event.getUser()))) {
+        if (!parentsRequirements || serverOnly && (!botRequirements || !memberRequirements)) {
             return false;
         }
 
         return !ownerCommand || event.isOwner();
-
     }
 
     public boolean isCommand(String commandName) {
