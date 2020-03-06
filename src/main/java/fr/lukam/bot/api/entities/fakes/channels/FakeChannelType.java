@@ -1,0 +1,17 @@
+package fr.lukam.bot.api.entities.fakes.channels;
+
+import fr.lukam.bot.api.entities.interfaces.channels.ChannelType;
+
+public class FakeChannelType implements ChannelType {
+
+    @Override
+    public String getType() {
+        return "";
+    }
+
+    @Override
+    public boolean isFake() {
+        return true;
+    }
+
+}
