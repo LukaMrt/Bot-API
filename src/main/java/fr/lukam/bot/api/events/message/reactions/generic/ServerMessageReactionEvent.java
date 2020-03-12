@@ -1,4 +1,6 @@
 package fr.lukam.bot.api.events.message.reactions.generic;
 
-public interface ServerMessageReactionEvent {
+import fr.lukam.bot.api.events.server.member.ServerMemberEvent;
+
+public interface ServerMessageReactionEvent extends MessageReactionEvent, ServerMemberEvent {
 }

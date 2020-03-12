@@ -1,4 +1,10 @@
 package fr.lukam.bot.api.events.server.emote;
 
-public interface EmoteEvent {
+import fr.lukam.bot.api.entities.interfaces.reaction.Emote;
+import fr.lukam.bot.api.events.server.ServerEvent;
+
+public interface EmoteEvent extends ServerEvent {
+
+    Emote getEmote();
+
 }

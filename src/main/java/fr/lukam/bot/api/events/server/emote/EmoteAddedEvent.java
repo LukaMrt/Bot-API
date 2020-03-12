@@ -1,4 +1,4 @@
 package fr.lukam.bot.api.events.server.emote;
 
-public interface EmoteAddedEvent {
+public interface EmoteAddedEvent extends EmoteEvent {
 }

@@ -1,4 +1,4 @@
-package fr.lukam.bot.api.events.message.reactions;
+package fr.lukam.bot.api.events.message.reactions.generic;
 
 import fr.lukam.bot.api.entities.interfaces.reaction.Reaction;
 import fr.lukam.bot.api.events.user.UserEvent;
