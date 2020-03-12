@@ -1,9 +1,9 @@
 package fr.lukam.bot.api.events.message;
 
 import fr.lukam.bot.api.entities.interfaces.message.Message;
-import fr.lukam.bot.api.events.member.ServerMemberEvent;
+import fr.lukam.bot.api.events.channel.generic.TextChannelEvent;
 
-public interface MessageReceivedEvent extends ServerMemberEvent {
+public interface MessageEvent extends TextChannelEvent {
 
     Message getMessage();
 
