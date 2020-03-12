@@ -35,7 +35,6 @@ public interface Message extends Identifiable, Fakeable {
 
     User getAuthor();
 
-
     void addReaction(Emote emote);
 
     void removeReaction(Emote emote);
