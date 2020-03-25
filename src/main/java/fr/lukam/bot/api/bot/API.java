@@ -4,14 +4,20 @@ import fr.lukam.bot.api.entities.fakes.FakeBot;
 import fr.lukam.bot.api.entities.fakes.message.FakeEmbedBuilder;
 import fr.lukam.bot.api.entities.fakes.message.FakeFieldBuilder;
 import fr.lukam.bot.api.entities.fakes.message.FakeMessageBuilder;
+import fr.lukam.bot.api.entities.interfaces.channels.ChannelType;
 import fr.lukam.bot.api.entities.interfaces.message.EmbedBuilder;
 import fr.lukam.bot.api.entities.interfaces.message.FieldBuilder;
 import fr.lukam.bot.api.entities.interfaces.message.MessageBuilder;
+import fr.lukam.bot.api.entities.interfaces.server.Permission;
 import fr.lukam.bot.api.entities.interfaces.server.Server;
+import fr.lukam.bot.api.entities.interfaces.user.Status;
 import fr.lukam.bot.api.entities.interfaces.user.User;
 import fr.lukam.bot.api.repositories.CommandsRepository;
 import fr.lukam.bot.api.repositories.InfosRepository;
 import fr.lukam.bot.api.repositories.ListenersRepository;
+import fr.lukam.bot.api.utils.ChannelTypeAdapter;
+import fr.lukam.bot.api.utils.PermissionAdapter;
+import fr.lukam.bot.api.utils.StatusAdapter;
 
 public abstract class API {
 
@@ -23,6 +29,10 @@ public abstract class API {
     private static InfosRepository infosRepository;
     private static CommandsRepository commandsRepository;
     private static ListenersRepository listenersRepository;
+
+    private static PermissionAdapter permissionAdapter;
+    private static StatusAdapter statusAdapter;
+    private static ChannelTypeAdapter channelTypeAdapter;
 
     public static void setBot(Bot bot) {
         API.bot = bot;
@@ -87,6 +97,30 @@ public abstract class API {
 
     public static ListenersRepository getListenersRepository() {
         return listenersRepository;
+    }
+
+    public static void setPermissionAdapter(PermissionAdapter permissionAdapter) {
+        API.permissionAdapter = permissionAdapter;
+    }
+
+    public static Permission getPermission(String permissionName) {
+        return permissionAdapter.fromPermissionName(permissionName);
+    }
+
+    public static void setStatusAdapter(StatusAdapter statusAdapter) {
+        API.statusAdapter = statusAdapter;
+    }
+
+    public static Status getStatus(String permissionName) {
+        return statusAdapter.fromStatusName(permissionName);
+    }
+
+    public static void setChannelTypeAdapter(ChannelTypeAdapter channelTypeAdapter) {
+        API.channelTypeAdapter = channelTypeAdapter;
+    }
+
+    public static ChannelType getChannelType(String channelTypeName) {
+        return channelTypeAdapter.fromChannelTypeName(channelTypeName);
     }
 
 }

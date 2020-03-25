@@ -78,4 +78,8 @@ public abstract class Command {
         return "``" + this.commandName + " " + this.arguments + "`` : " + this.help;
     }
 
+    public String getName() {
+        return this.commandName;
+    }
+
 }
