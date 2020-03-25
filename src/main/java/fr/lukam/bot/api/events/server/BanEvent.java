@@ -1,6 +1,6 @@
 package fr.lukam.bot.api.events.server;
 
-import fr.lukam.bot.api.events.server.member.ServerMemberEvent;
+import fr.lukam.bot.api.events.user.UserEvent;
 
-public interface BanEvent extends ServerMemberEvent {
+public interface BanEvent extends UserEvent {
 }

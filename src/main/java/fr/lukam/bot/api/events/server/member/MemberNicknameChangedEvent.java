@@ -1,6 +1,6 @@
 package fr.lukam.bot.api.events.server.member;
 
-public interface MemberNickNameChangeEvent extends ServerMemberEvent {
+public interface MemberNicknameChangedEvent extends ServerMemberEvent {
 
     String getOldNickName();
 
