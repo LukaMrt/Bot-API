@@ -74,6 +74,10 @@ public abstract class API {
         return bot.getUser(userId);
     }
 
+    public static User getUserByName(String userName) {
+        return bot.getUserByName(userName);
+    }
+
     public static EmbedBuilder createEmbed() {
         return embedBuilder.anEmbed();
     }
@@ -111,8 +115,8 @@ public abstract class API {
         API.statusAdapter = statusAdapter;
     }
 
-    public static Status getStatus(String permissionName) {
-        return statusAdapter.fromStatusName(permissionName);
+    public static Status getStatus(String statusName) {
+        return statusAdapter.fromStatusName(statusName);
     }
 
     public static void setChannelTypeAdapter(ChannelTypeAdapter channelTypeAdapter) {
