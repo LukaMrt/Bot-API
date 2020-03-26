@@ -24,6 +24,11 @@ public class FakeBot implements Bot {
     }
 
     @Override
+    public User getUserByName(String userName) {
+        return new FakeUser();
+    }
+
+    @Override
     public boolean isFake() {
         return true;
     }
