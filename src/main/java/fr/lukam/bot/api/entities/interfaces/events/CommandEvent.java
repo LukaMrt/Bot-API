@@ -13,6 +13,8 @@ public interface CommandEvent {
 
     User getUser();
 
+    Message getMessage();
+
     TextChannel getChannel();
 
     Server getServer();
