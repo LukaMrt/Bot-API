@@ -15,6 +15,7 @@ import fr.lukam.bot.api.entities.interfaces.user.User;
 import fr.lukam.bot.api.repositories.CommandsRepository;
 import fr.lukam.bot.api.repositories.InfosRepository;
 import fr.lukam.bot.api.repositories.ListenersRepository;
+import fr.lukam.bot.api.repositories.PluginsRepository;
 import fr.lukam.bot.api.utils.ChannelTypeAdapter;
 import fr.lukam.bot.api.utils.PermissionAdapter;
 import fr.lukam.bot.api.utils.StatusAdapter;
@@ -29,6 +30,7 @@ public abstract class API {
     private static InfosRepository infosRepository;
     private static CommandsRepository commandsRepository;
     private static ListenersRepository listenersRepository;
+    private static PluginsRepository pluginsRepository;
 
     private static PermissionAdapter permissionAdapter;
     private static StatusAdapter statusAdapter;
@@ -60,6 +62,10 @@ public abstract class API {
 
     public static void setListenersRepository(ListenersRepository listenersRepository) {
         API.listenersRepository = listenersRepository;
+    }
+
+    public static void setPluginsRepository(PluginsRepository pluginsRepository) {
+        API.pluginsRepository = pluginsRepository;
     }
 
     public static Server getServer(String serverId) {
@@ -101,6 +107,10 @@ public abstract class API {
 
     public static ListenersRepository getListenersRepository() {
         return listenersRepository;
+    }
+
+    public static PluginsRepository getPluginsRepository() {
+        return pluginsRepository;
     }
 
     public static void setPermissionAdapter(PermissionAdapter permissionAdapter) {
