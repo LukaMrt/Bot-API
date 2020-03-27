@@ -52,14 +52,6 @@ public abstract class Command {
         boolean botRequirements = BOT_REQUIREMENTS.test(event.getServer());
         boolean memberRequirements = MEMBER_REQUIREMENTS.test(event.getServerMember());
 
-        System.out.println("parents : " + Arrays.toString(parents));
-        System.out.println(parentsRequirements);
-        System.out.println(Arrays.toString(requiredBotPermissions));
-        System.out.println(botRequirements);
-        System.out.println(Arrays.toString(requiredUserPermissions));
-        System.out.println(memberRequirements);
-        System.out.println(event.getServerMember());
-
         if (!parentsRequirements || serverOnly && (!botRequirements || !memberRequirements)) {
             return false;
         }
