@@ -3,6 +3,7 @@ package fr.lukam.bot.api.entities.interfaces.events;
 import fr.lukam.bot.api.entities.interfaces.channels.TextChannel;
 import fr.lukam.bot.api.entities.interfaces.message.Message;
 import fr.lukam.bot.api.entities.interfaces.server.Server;
+import fr.lukam.bot.api.entities.interfaces.server.ServerMember;
 import fr.lukam.bot.api.entities.interfaces.user.User;
 
 public interface CommandEvent {
@@ -12,6 +13,8 @@ public interface CommandEvent {
     String[] getArgs();
 
     User getUser();
+
+    ServerMember getServerMember();
 
     Message getMessage();
 
