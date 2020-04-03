@@ -12,4 +12,6 @@ public interface Bot extends Fakeable {
 
     User getUser(String userId);
 
+    User getUserByName(String userName);
+
 }

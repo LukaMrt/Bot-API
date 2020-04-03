@@ -1,6 +1,6 @@
 package fr.lukam.bot.api.events.server.emote;
 
-public interface EmoteUpdateNameEvent extends EmoteEvent {
+public interface EmoteNameUpdatedEvent extends EmoteEvent {
 
     String getOldName();
 

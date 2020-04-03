@@ -50,7 +50,7 @@ public abstract class Command {
 
         boolean parentsRequirements = Arrays.stream(this.parents).allMatch(command -> command.canExecute(event));
         boolean botRequirements = BOT_REQUIREMENTS.test(event.getServer());
-        boolean memberRequirements = MEMBER_REQUIREMENTS.test((ServerMember) event.getUser());
+        boolean memberRequirements = MEMBER_REQUIREMENTS.test(event.getServerMember());
 
         if (!parentsRequirements || serverOnly && (!botRequirements || !memberRequirements)) {
             return false;
@@ -76,6 +76,10 @@ public abstract class Command {
 
     public String getHelp() {
         return "``" + this.commandName + " " + this.arguments + "`` : " + this.help;
+    }
+
+    public String getName() {
+        return this.commandName;
     }
 
 }

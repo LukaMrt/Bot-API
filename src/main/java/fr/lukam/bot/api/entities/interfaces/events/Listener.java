@@ -5,39 +5,41 @@ import fr.lukam.bot.api.events.category.CategoryAddedEvent;
 import fr.lukam.bot.api.events.category.CategoryRemovedEvent;
 import fr.lukam.bot.api.events.channel.text.TextChannelAddedEvent;
 import fr.lukam.bot.api.events.channel.text.TextChannelRemovedEvent;
-import fr.lukam.bot.api.events.channel.text.TextChannelUpdateNameEvent;
+import fr.lukam.bot.api.events.channel.text.TextChannelNameUpdatedEvent;
 import fr.lukam.bot.api.events.channel.voice.VoiceChannelAddedEvent;
 import fr.lukam.bot.api.events.channel.voice.VoiceChannelRemovedEvent;
-import fr.lukam.bot.api.events.channel.voice.VoiceChannelUpdateNameEvent;
-import fr.lukam.bot.api.events.message.actions.MessageDeletedEvent;
-import fr.lukam.bot.api.events.message.actions.MessageReceivedEvent;
-import fr.lukam.bot.api.events.message.actions.MessageUpdatedEvent;
+import fr.lukam.bot.api.events.channel.voice.VoiceChannelNameUpdatedEvent;
+import fr.lukam.bot.api.events.message.actions.PrivateMessageDeletedEvent;
+import fr.lukam.bot.api.events.message.actions.PrivateMessageReceivedEvent;
+import fr.lukam.bot.api.events.message.actions.PrivateMessageUpdatedEvent;
 import fr.lukam.bot.api.events.message.actions.server.ServerMessageDeletedEvent;
 import fr.lukam.bot.api.events.message.actions.server.ServerMessageReceivedEvent;
 import fr.lukam.bot.api.events.message.actions.server.ServerMessageUpdatedEvent;
+import fr.lukam.bot.api.events.message.reactions.PrivateMessageReactionAddedEvent;
+import fr.lukam.bot.api.events.message.reactions.PrivateMessageReactionRemovedEvent;
 import fr.lukam.bot.api.events.message.reactions.server.ServerMessageReactionAddedEvent;
 import fr.lukam.bot.api.events.message.reactions.server.ServerMessageReactionRemovedEvent;
-import fr.lukam.bot.api.events.roles.RoleColorUpdateColor;
-import fr.lukam.bot.api.events.roles.RoleCreateEvent;
-import fr.lukam.bot.api.events.roles.RoleNameUpdateEvent;
+import fr.lukam.bot.api.events.roles.RoleColorUpdatedEvent;
+import fr.lukam.bot.api.events.roles.RoleCreatedEvent;
+import fr.lukam.bot.api.events.roles.RoleNameUpdatedEvent;
 import fr.lukam.bot.api.events.roles.RoleRemovedEvent;
 import fr.lukam.bot.api.events.server.BanEvent;
-import fr.lukam.bot.api.events.server.ServerNameUpdateEvent;
-import fr.lukam.bot.api.events.server.ServerOwnerUpdateEvent;
+import fr.lukam.bot.api.events.server.ServerNameUpdatedEvent;
+import fr.lukam.bot.api.events.server.ServerOwnerUpdatedEvent;
 import fr.lukam.bot.api.events.server.UnBanEvent;
 import fr.lukam.bot.api.events.server.emote.EmoteAddedEvent;
 import fr.lukam.bot.api.events.server.emote.EmoteRemovedEvent;
-import fr.lukam.bot.api.events.server.emote.EmoteUpdateNameEvent;
-import fr.lukam.bot.api.events.server.member.MemberJoinEvent;
-import fr.lukam.bot.api.events.server.member.MemberQuitEvent;
-import fr.lukam.bot.api.events.server.member.MemberNickNameChangeEvent;
+import fr.lukam.bot.api.events.server.emote.EmoteNameUpdatedEvent;
+import fr.lukam.bot.api.events.server.member.MemberJoinedEvent;
+import fr.lukam.bot.api.events.server.member.MemberLeftEvent;
+import fr.lukam.bot.api.events.server.member.MemberNicknameChangedEvent;
 import fr.lukam.bot.api.events.server.member.MemberTypingEvent;
 import fr.lukam.bot.api.events.server.member.MemberRoleAddedEvent;
-import fr.lukam.bot.api.events.server.member.MemberRoleRemoveEvent;
-import fr.lukam.bot.api.events.server.voice.VoiceConnectEvent;
-import fr.lukam.bot.api.events.server.voice.VoiceDisconnectEvent;
-import fr.lukam.bot.api.events.server.voice.VoiceMoveEvent;
-import fr.lukam.bot.api.events.user.UserNameChangeEvent;
+import fr.lukam.bot.api.events.server.member.MemberRoleRemovedEvent;
+import fr.lukam.bot.api.events.server.voice.VoiceMemberConnectedEvent;
+import fr.lukam.bot.api.events.server.voice.VoiceMemberDisconnectedEvent;
+import fr.lukam.bot.api.events.server.voice.VoiceMemberMovedEvent;
+import fr.lukam.bot.api.events.user.UserNameUpdatedEvent;
 import fr.lukam.bot.api.events.user.UserTypingEvent;
 
 public abstract class Listener {
@@ -47,7 +49,7 @@ public abstract class Listener {
     }
 
     //User Events
-    public void onUserUpdateName(UserNameChangeEvent event) {
+    public void onUserUpdateName(UserNameUpdatedEvent event) {
         // Empty because of operation of listeners system
     }
 
@@ -76,15 +78,15 @@ public abstract class Listener {
         // Empty because of operation of listeners system
     }
 
-    public void onPrivateMessageReceived(MessageReceivedEvent event) {
+    public void onPrivateMessageReceived(PrivateMessageReceivedEvent event) {
         // Empty because of operation of listeners system
     }
 
-    public void onPrivateMessageUpdate(MessageUpdatedEvent event) {
+    public void onPrivateMessageUpdate(PrivateMessageUpdatedEvent event) {
         // Empty because of operation of listeners system
     }
 
-    public void onPrivateMessageDelete(MessageDeletedEvent event) {
+    public void onPrivateMessageDelete(PrivateMessageDeletedEvent event) {
         // Empty because of operation of listeners system
     }
 
@@ -92,11 +94,11 @@ public abstract class Listener {
         // Empty because of operation of listeners system
     }
 
-    public void onPrivateMessageReactionAdd(ServerMessageReactionAddedEvent event) {
+    public void onPrivateMessageReactionAdd(PrivateMessageReactionAddedEvent event) {
         // Empty because of operation of listeners system
     }
 
-    public void onPrivateMessageReactionRemove(ServerMessageReactionRemovedEvent event) {
+    public void onPrivateMessageReactionRemove(PrivateMessageReactionRemovedEvent event) {
         // Empty because of operation of listeners system
     }
 
@@ -105,7 +107,7 @@ public abstract class Listener {
         // Empty because of operation of listeners system
     }
 
-    public void onTextChannelUpdateName(TextChannelUpdateNameEvent event) {
+    public void onTextChannelUpdateName(TextChannelNameUpdatedEvent event) {
         // Empty because of operation of listeners system
     }
 
@@ -118,7 +120,7 @@ public abstract class Listener {
         // Empty because of operation of listeners system
     }
 
-    public void onVoiceChannelUpdateName(VoiceChannelUpdateNameEvent event) {
+    public void onVoiceChannelUpdateName(VoiceChannelNameUpdatedEvent event) {
         // Empty because of operation of listeners system
     }
 
@@ -144,20 +146,20 @@ public abstract class Listener {
         // Empty because of operation of listeners system
     }
 
-    public void onServerUpdateName(ServerNameUpdateEvent event){
+    public void onServerUpdateName(ServerNameUpdatedEvent event){
         // Empty because of operation of listeners system
     }
 
-    public void onServerUpdateOwner(ServerOwnerUpdateEvent event) {
+    public void onServerUpdateOwner(ServerOwnerUpdatedEvent event) {
         // Empty because of operation of listeners system
     }
 
     //Server Member Events
-    public void onServerMemberJoin(MemberJoinEvent event) {
+    public void onServerMemberJoin(MemberJoinedEvent event) {
         // Empty because of operation of listeners system
     }
 
-    public void onServerMemberLeave(MemberQuitEvent event) {
+    public void onServerMemberLeave(MemberLeftEvent event) {
         // Empty because of operation of listeners system
     }
 
@@ -165,11 +167,11 @@ public abstract class Listener {
         // Empty because of operation of listeners system
     }
 
-    public void onServerMemberRoleRemove(MemberRoleRemoveEvent event) {
+    public void onServerMemberRoleRemove(MemberRoleRemovedEvent event) {
         // Empty because of operation of listeners system
     }
 
-    public void onServerMemberUpdateNickname(MemberNickNameChangeEvent event) {
+    public void onServerMemberUpdateNickname(MemberNicknameChangedEvent event) {
         // Empty because of operation of listeners system
     }
 
@@ -178,20 +180,20 @@ public abstract class Listener {
     }
 
     //Server Voice Events
-    public void onServerVoiceJoin(VoiceConnectEvent event) {
+    public void onServerVoiceJoin(VoiceMemberConnectedEvent event) {
         // Empty because of operation of listeners system
     }
 
-    public void onServerVoiceMove(VoiceMoveEvent event) {
+    public void onServerVoiceMove(VoiceMemberMovedEvent event) {
         // Empty because of operation of listeners system
     }
 
-    public void onServerVoiceLeave(VoiceDisconnectEvent event) {
+    public void onServerVoiceLeave(VoiceMemberDisconnectedEvent event) {
         // Empty because of operation of listeners system
     }
 
     //Role events
-    public void onRoleCreate(RoleCreateEvent event) {
+    public void onRoleCreate(RoleCreatedEvent event) {
         // Empty because of operation of listeners system
     }
 
@@ -199,11 +201,11 @@ public abstract class Listener {
         // Empty because of operation of listeners system
     }
 
-    public void onRoleUpdateColor(RoleColorUpdateColor event) {
+    public void onRoleUpdateColor(RoleColorUpdatedEvent event) {
         // Empty because of operation of listeners system
     }
 
-    public void onRoleUpdateName(RoleNameUpdateEvent event) {
+    public void onRoleUpdateName(RoleNameUpdatedEvent event) {
         // Empty because of operation of listeners system
     }
 
@@ -216,7 +218,7 @@ public abstract class Listener {
         // Empty because of operation of listeners system
     }
 
-    public void onEmoteUpdateName(EmoteUpdateNameEvent event) {
+    public void onEmoteUpdateName(EmoteNameUpdatedEvent event) {
         // Empty because of operation of listeners system
     }
 
