@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ListenersRepository {
 
-    void registerListener(List<Listener> listeners);
+    void registerListeners(List<Listener> listeners);
 
     List<Listener> getListeners();
 
