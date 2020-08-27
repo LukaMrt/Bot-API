@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface CommandsRepository {
 
+    void registerCommands(List<Command> commands);
+
     List<Command> getCommands();
 
     Command getCommandByName(String name);
