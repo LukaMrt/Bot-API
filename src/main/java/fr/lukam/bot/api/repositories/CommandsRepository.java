@@ -1,7 +1,6 @@
 package fr.lukam.bot.api.repositories;
 
 import fr.lukam.bot.api.entities.interfaces.commands.Command;
-import fr.lukam.bot.api.entities.interfaces.events.Listener;
 
 import java.util.List;
 
