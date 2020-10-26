@@ -14,4 +14,9 @@ public class FakeField implements Field {
         return "";
     }
 
+    @Override
+    public boolean isInline() {
+        return false;
+    }
+
 }

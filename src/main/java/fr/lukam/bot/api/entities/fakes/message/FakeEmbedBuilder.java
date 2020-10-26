@@ -20,6 +20,11 @@ public class FakeEmbedBuilder implements EmbedBuilder {
     }
 
     @Override
+    public EmbedBuilder setThumbnailURL(String url) {
+        return this;
+    }
+
+    @Override
     public EmbedBuilder setAuthor(User user) {
         return this;
     }

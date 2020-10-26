@@ -6,4 +6,6 @@ public interface Field {
 
     String getContent();
 
+    boolean isInline();
+
 }

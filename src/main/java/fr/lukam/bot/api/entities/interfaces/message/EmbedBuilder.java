@@ -11,6 +11,8 @@ public interface EmbedBuilder extends Fakeable {
 
     EmbedBuilder setImageURL(String url);
 
+    EmbedBuilder setThumbnailURL(String url);
+
     EmbedBuilder setAuthor(User user);
 
     EmbedBuilder addField(Field field);

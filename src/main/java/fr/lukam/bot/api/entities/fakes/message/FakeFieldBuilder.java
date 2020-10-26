@@ -21,6 +21,11 @@ public class FakeFieldBuilder implements FieldBuilder {
     }
 
     @Override
+    public FieldBuilder setInline(boolean inline) {
+        return this;
+    }
+
+    @Override
     public Field build() {
         return new FakeField();
     }

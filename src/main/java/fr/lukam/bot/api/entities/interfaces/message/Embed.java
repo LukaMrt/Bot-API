@@ -23,4 +23,6 @@ public interface Embed extends Fakeable {
 
     String getImageURL();
 
+    String getThumbnailURL();
+
 }
