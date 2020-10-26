@@ -8,6 +8,8 @@ public interface FieldBuilder {
 
     FieldBuilder setContent(String content);
 
+    FieldBuilder setInline(boolean inline);
+
     Field build();
 
 }

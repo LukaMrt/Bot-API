@@ -50,6 +50,11 @@ public class FakeEmbed implements Embed {
     }
 
     @Override
+    public String getThumbnailURL() {
+        return "";
+    }
+
+    @Override
     public boolean isFake() {
         return true;
     }
